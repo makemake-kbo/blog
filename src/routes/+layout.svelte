@@ -4,7 +4,7 @@
   import MoonIcon from 'heroicons-svelte/solid/MoonIcon.svelte'
   import SunIcon from 'heroicons-svelte/solid/SunIcon.svelte'
   import { browser } from '$app/environment'
-  import { name } from '$lib/info'
+  import { name, blogName } from '$lib/info'
   import { page } from '$app/stores'
 
   let isDarkMode = browser ? Boolean(document.documentElement.classList.contains('dark')) : true
@@ -24,7 +24,7 @@
         class="text-lg font-bold sm:text-2xl !text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-teal-600 dark:to-teal-400"
         href="/"
       >
-        {name}
+        {blogName}
       </a>
 
       <button

@@ -2,14 +2,14 @@
   import ArrowRightIcon from '$lib/components/ArrowRightIcon.svelte'
   import PostsList from '$lib/components/PostsList.svelte'
   import SocialLinks from '$lib/components/SocialLinks.svelte'
-  import { avatar, bio, name } from '$lib/info.js'
+  import { avatar, bio, alias, name } from '$lib/info.js'
 
   /** @type {import('./$types').PageData} */
   export let data
 </script>
 
 <svelte:head>
-  <title>{name}</title>
+  <title>{alias}</title>
   <meta name="description" content={bio} />
 </svelte:head>
 
@@ -25,7 +25,7 @@
       <div class="flex gap-6">
         <SocialLinks />
       </div>
-      <p class="text-base text-zinc-600 dark:text-zinc-400">
+      <p class="text-base text-zinc-600 dark:text-zinc-400 bio">
         {bio}
       </p>
     </div>
@@ -42,3 +42,9 @@
     <PostsList posts={data.posts} />
   </section>
 </div>
+
+<style>
+  .bio {
+    text-align: center;
+  }
+</style>

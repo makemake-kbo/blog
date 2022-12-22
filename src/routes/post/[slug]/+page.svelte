@@ -1,5 +1,5 @@
 <script>
-  import { website, name, bio, avatar } from '$lib/info.js'
+  import { website, name, alias, bio, avatar } from '$lib/info.js'
   import ToC from '$lib/components/ToC.svelte'
   import ArrowLeftIcon from '$lib/components/ArrowLeftIcon.svelte'
   import SocialLinks from '$lib/components/SocialLinks.svelte'
@@ -33,8 +33,9 @@
   }
 </script>
 
+
 <svelte:head>
-  <title>{data.post.title} - {name}</title>
+  <title>{data.post.title} - {alias}</title>
   <meta name="description" content={data.post.preview.text} />
   <meta name="author" content={name} />
 
@@ -105,7 +106,7 @@
             />
           </a>
         </div>
-        <p class="order-3 text-base text-zinc-600 dark:text-zinc-400">
+        <p class="order-3 text-base text-zinc-600 dark:text-zinc-400 bio">
           {bio}
         </p>
       </div>
@@ -131,5 +132,9 @@
       /* 42rem matches max-w-2xl */
       grid-template-columns: 1fr 42rem 1fr;
     }
+  }
+
+  .bio {
+    text-align: center;
   }
 </style>

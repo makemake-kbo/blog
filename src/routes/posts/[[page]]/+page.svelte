@@ -1,5 +1,5 @@
 <script>
-  import { name } from '$lib/info.js'
+  import { alias } from '$lib/info.js'
   import ArrowLeftIcon from '$lib/components/ArrowLeftIcon.svelte'
   import ArrowRightIcon from '$lib/components/ArrowRightIcon.svelte'
   import PostsList from '$lib/components/PostsList.svelte'
@@ -12,13 +12,13 @@
 </script>
 
 <svelte:head>
-  <title>{name} | Posts</title>
+  <title>{alias} | Posts</title>
 </svelte:head>
 
 <div class="flex flex-col flex-grow">
   <header class="pt-4">
-    <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">
-      Writing on tech, music, and whatever else I feel like
+    <h1 class="text-4xl font-bold tracking-tight sm:text-4xl">
+      Writings about technolgy, literature, programming, and more.
     </h1>
     <p class="mt-6">All of my written content collected in one place</p>
   </header>
