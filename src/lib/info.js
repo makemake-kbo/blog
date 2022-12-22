@@ -15,12 +15,12 @@ export const blogName = `${alias}'s blog`
 // Used for the landing page & footer of posts
 export const avatar = '/favicon.png'
 export const bio = `\
-I’m ${alias}, self taught software developer, and cryptography and BFT technology enthusiast.
-Ever since I was little, i've been fascinated by computer programming and the automation it can bring.
-When I first heard about Ethereum in 2016 I fell in love the idea of uncensorable, decentralized, autonomous programs and the
-inevitable change they would bring to the world. Ever since, I have been following the ecosystem, and finally decided to go
-all in in 2020. I am currently working on a undercollateralized, decentralized, trustless, minimal governance protocol for 
-digital asset borrowing. 
+Hi, my name is ${alias} and I am a self-taught software developer with a strong interest in cryptography 
+and BFT technology. I have always been fascinated by the power of computer programming to automate processes and bring 
+about change. When I discovered Ethereum in 2018, I was immediately drawn to the concept of decentralized, autonomous 
+programs that are resistant to censorship and capable of shaping the future. I have been following the Ethereum 
+ecosystem closely ever since. Currently, I am working on a decentralized, trustless protocol for borrowing digital 
+assets without the need for collateral or complex governance structures.
 `
 
 // Your social usernames, empty strings won't be used.
