@@ -67,14 +67,31 @@ While it's very unlikely that enough members of the committee would collude and 
 possibility.   
 
 In my opinion, DeFi protocols should be designed to be fully sovereign and autonomous. The protocol should work the same
-way today and in 100 or more years. Being reliant on chainlink or other similar centralized oracle schemes adds systemic
-risk. While it may be a fine compromise today, will that still hold true in 100 years?
+way today and in 100 or more years. Having a singular point of failure adds systemic risk to the entire protocol. 
+While it may be a fine compromise today, will that still hold true in 100 years?
 
 ![big man](./sergey.png) 
-
 
 ## Decentralized oracles
 
 Enter decentralized oracles.   
 
-Before we do a deep dive it is important to mention that there are generally 2 major types of decentralized oracles. 
+Before we do a deep dive it is important to mention that there are generally 2 major types of decentralized oracles:
+
+- Optimistic oracles
+- Fully on chain oracles
+
+While there are other oracle solutions that fall outside off these categories, they are not actually decentralized, 
+despite what their marketing may suggest.
+
+### Optimistic oracles
+
+Optimistic oracles work on a similar principal to optimistic rollups, *"True until proven false"*.   
+The two biggest players in the optimistic oracle game are [UMA](https://umaproject.org) and [Tellor](https://tellor.io). 
+While both of these projects have their own unique features, they are very similar in the way they work.  
+
+To post data on-chain, a reporter must post a stake. When data gets requested, a reporter sends the data on chain. 
+After a certain period has passed, the data becomes finalized. If the data gets disputed, there is a mechanism to
+determine if the data reporter lied. If it's determined that the reporter lied, the request gets removed from the chain
+and the reporter gets punished, usually by slashing his stake. If the vote, however, gets rejected, the disputer loses
+his stake.
